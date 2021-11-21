@@ -1,0 +1,8 @@
+<h1 class="text-6xl theme-blue tracking-wide"><%= _("Raet Blong Save") %></h1>
+
+<p class="intro__description pt-10 text-lg">
+  <%= _("Every citizen has the right to access information held by public authorities.") %>
+  <% if AlaveteliConfiguration.authority_must_respond %>
+    <%= _("By law, they have to respond.") %>
+  <% end %>
+</p>
