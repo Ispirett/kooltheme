@@ -32,8 +32,8 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: darken($color_primary, 15%);
-    color: $color_white;
+    color: $primary-color;
+    border-bottom: 2px solid $primary-color;
   }
 
 }
@@ -42,11 +42,13 @@
 %selected-menu-item {
   font-weight: bold;
   color: #2b2b2b;
-  background-color: $color_neutral_light;
+  //background-color: $color_neutral_light;
   &:hover,
   &:active,
   &:focus {
-    background-color: $color_neutral_light;
+    //background-color: $color_neutral_light;
+    border-bottom: 2px solid $primary-color !important;
+    color: $primary-color !important;
   }
 }
 
@@ -115,7 +117,8 @@
   &:hover,
   &:active,
   &:focus {
-    color: #fff;
+    color: $primary-color;
+    border-bottom: 2px solid $primary-color;
   }
 }
 
@@ -162,7 +165,6 @@ form input[type="email"],
 form input[type="url"],
 form input[type="tel"],
 form input[type="number"] {
-    border-radius: 0;
     background-color: $form_input-bg;
     /* Set a fixed height for text inputs in older IE 8 */
     @include ie8{
