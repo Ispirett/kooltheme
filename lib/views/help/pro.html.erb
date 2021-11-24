@@ -1,9 +1,9 @@
 <% @title = 'Pro' %>
-
+<div class="flex flex-col lg:flex-row justify-between gap-20 ">
 <%= render partial: 'sidebar' %>
 
-<div id="left_column_flip" class="left_column_flip">
-  <h1 id="pro">
+<div id="left_column_flip" class="left_column_flip  pt-4 order-first lg:order-last">
+  <h1 class="font-bold text-4xl" id="pro">
     <%= @title %>
   </h1>
 
@@ -192,4 +192,5 @@
     <%= link_to 'responsible requests',
       help_requesting_path(anchor: 'responsible') %>.
   </p>
+</div>
 </div>

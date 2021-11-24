@@ -38,7 +38,7 @@ $font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $form_input-bg: $color_white;
 $form-label-font-color: $color_black;
 
-$button-bg: darken($color_green, 10%);
+$button-bg: $color_primary ;
 $button-color: $color_white;
 
 $status-success: darken($color_green, 18%);

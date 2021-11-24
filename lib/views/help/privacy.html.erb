@@ -1,9 +1,10 @@
 <% @title = "Your privacy" %>
 
+<div class="flex flex-col lg:flex-row justify-between gap-20 ">
 <%= render :partial => 'sidebar' %>
 
-<div id="left_column_flip" class="left_column_flip">
-  <h1 id="privacy"><%= @title %> <a href="#privacy">#</a></h1>
+<div id="left_column_flip" class="left_column_flip  pt-4 order-first lg:order-last">
+  <h1 class="font-bold text-4xl" id="privacy"><%= @title %> <a href="#privacy">#</a></h1>
   <dl>
 
     <dt id="email_address">Who gets to see my email address? <a href="#email_address">#</a> </dt>
@@ -180,4 +181,5 @@
   <p><strong>Learn more</strong> from the help for <a href="<%= help_officers_path %>">FOI officers</a> --&gt;
 
     <div id="hash_link_padding"></div>
+</div>
 </div>

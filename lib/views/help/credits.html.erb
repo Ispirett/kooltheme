@@ -1,8 +1,11 @@
 <% @title = "Credit where credit’s due" %>
 
+
+<div class="flex flex-col lg:flex-row justify-between gap-20 ">
+
 <%= render :partial => 'sidebar' %>
-<div id="left_column_flip" class="left_column_flip">
-<h1 id="credits"><%= @title %> <a href="#credits">#</a> </h1>
+<div id="left_column_flip" class="left_column_flip pt-4 order-first lg:order-last">
+<h1 class="font-bold text-4xl"  id="credits"><%= @title %> <a href="#credits">#</a> </h1>
 
 <p>Alaveteli, the software that powers <%= site_name %>, is a project of <a href="https://www.mysociety.org">mySociety</a>, a UK organisation. mySociety builds websites that empower citizens to hold authorities to account. And this is one of those sites.</p>
 
@@ -55,5 +58,7 @@
 </dl>
 
 <div id="hash_link_padding"></div>
+
+</div>
 
 </div>

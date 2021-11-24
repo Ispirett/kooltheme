@@ -1,9 +1,23 @@
 <% @title = "About" %>
 
+<div class="flex flex-col lg:flex-row justify-between gap-20 ">
+
 <%= render :partial => 'sidebar' %>
 
-<div id="left_column_flip" class="left_column_flip">
-  <h1 id="introduction">Introduction to <%= site_name %> <a href="#introduction">#</a></h1>
+
+  <div id="left_column_flip" class=" pt-4 order-first lg:order-last ">
+  <h1 class="font-bold  text-4xl mb-4" id="introduction">- Introduction to <%= site_name %> <a href="#introduction"></a></h1>
+    <%= form_tag(advanced_search_url, :method => "get") do %>
+      <p>
+        <%= text_field_tag :query, @query, { :size => 60, class: "search-input "}%>
+        <%= hidden_field_tag 'sortby', @inputted_sortby %>
+        <% if @bodies %>
+          <%= hidden_field_tag 'bodies', 1 %>
+        <% end %>
+        <%= submit_tag _("Search") , class: "ml-6" %>
+      </p>
+    <% end %>
+
   <dl>
 
     <dt id="purpose">What is <%= site_name %> for? <a href="#purpose">#</a> </dt>
@@ -76,4 +90,5 @@
   <p><strong>Next</strong>, read about <a href="<%= help_requesting_path %>">making requests</a> --&gt;</p>
 
   <div id="hash_link_padding"></div>
+</div>
 </div>

@@ -1,0 +1,59 @@
+<% @title = @description.empty? ? _("Public authorities") : _("Public authorities - {{description}}", :description => @description) %>
+
+<div class="flex flex-col  lg:flex-row gap-20">
+<div id="right_column_flip" class=" max-h-96 shadow-lg rounded-2xl p-4 flex-auto ">
+<!--  <h2><%#=_('Show only...')%></h2>-->
+
+  <h3 class="font-bold text-lg"><%=_( ' Show only Beginning with') %></h3>
+
+  <ul class="pt-4">
+    <li>
+      <%= render :partial => 'alphabet' %>
+    </li>
+  </ul>
+
+  <%# first_row = true %>
+  <%# for row in PublicBodyCategory.get().with_headings() %>
+    <%# if row.instance_of?(Array) %>
+<!--      <li>-->
+        <%#= link_to_unless (@tag == row[0]), row[1], list_public_bodies_by_tag_path(row[0]) %>
+<!--      </li>-->
+    <%# else %>
+      <%# if not first_row %>
+<!--        </ul>-->
+      <%# else %>
+        <%# first_row = false %>
+      <%# end %>
+<!--      <h3><%#=h row%></h3>-->
+<!--      <ul>-->
+    <%# end %>
+  <%# end %>
+
+  <%# if not first_row %>
+<!--    </ul>-->
+  <%# end %>
+
+  <%= render :partial => "list_sidebar_extra",
+             :locals => { :country_code => @country_code } %>
+</div>
+
+<div id="left_column_flip" class="flex-auto  order-first lg:order-last">
+  <h1 class="font-bold text-4xl pb-4" ><%= _('- Public authorities') %></h1>
+
+  <%= form_tag(list_public_bodies_default_url, :method => "get", :id=>"search_form", class: "w-11/12") do %>
+    <div>
+      <!--      <label for="public_body_query"><%#=_('Find an authority')%></label>-->
+      <%= text_field_tag(:public_body_query, params[:public_body_query], { :title => "type your search term here" } ) %>
+      <%= submit_tag(_("Search")) %>
+    </div>
+  <% end %>
+
+  <h2 class="publicbody_results">
+    <%= @description %>
+  </h2>
+
+  <%= render :partial => 'body_listing', :locals => { :public_bodies => @public_bodies } %>
+  <%= will_paginate(@public_bodies) %><br/>
+  <%= link_to _("Can't find the one you want?"), help_requesting_path(:anchor => 'missing_body') %>
+</div>
+</div>

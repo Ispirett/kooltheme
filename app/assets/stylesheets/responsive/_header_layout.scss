@@ -432,3 +432,9 @@
   float: left;
   margin-right: 1em;
 }
+
+.selected-two a{
+  color: $color_primary !important;
+  font-weight: bold;
+  border-bottom: 2px solid $primary-color !important;
+}

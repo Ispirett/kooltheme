@@ -1,9 +1,12 @@
 <% @title = "FOI officer questions" %>
 
+
+<div class="flex flex-col lg:flex-row justify-between gap-20 ">
+
 <%= render :partial => 'sidebar' %>
 
-<div id="left_column_flip" class="left_column_flip">
-  <h1 id="officers"><%= @title %> <a href="#officers">#</a> </h1>
+  <div id="left_column_flip" class="left_column_flip pt-4 order-first lg:order-last">
+  <h1 class="font-bold text-4xl" id="officers"><%= @title %> <a href="#officers">#</a> </h1>
 
   <dl>
 
@@ -205,4 +208,5 @@
     <br><strong>Otherwise</strong>, the <a href="<%= help_credits_path %>">credits</a> or the <a href="<%= help_api_path %>">programmers API</a> --&gt;
 
     <div id="hash_link_padding"></div>
+</div>
 </div>

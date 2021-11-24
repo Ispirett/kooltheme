@@ -168,12 +168,24 @@ form input[type="number"] {
     background-color: $form_input-bg;
     /* Set a fixed height for text inputs in older IE 8 */
     @include ie8{
-        height: 2.3125em;
+        height: 3em;
+
     }
     /* Do the same in px for IE < 7 */
     @include lte-ie7{
-        height: 22px;
+        height: 40px;
     }
+    height: 3em;
+    border: 1px solid $primary-color;
+    border-radius: .5em;
+
+  &:focus{
+    border: 2px solid $primary-color;
+  }
+  &:hover{
+    border: 2px solid $primary-color;
+
+  }
 }
 
 input.use-datepicker[type=text] {
@@ -220,13 +232,15 @@ input.use-datepicker[type=text] {
   color: $color_white;
   background-color: $button-bg;
   border: none;
+  height: 3.3em;
+  border-radius: .5em;
   &:hover,
   &:active,
   &:focus,
   &:visited:hover,
   &:visited:active,
   &:visited:focus {
-    background-color: darken($button-bg, 10%);
+    background-color: darken($button-bg, 5%);
     color: $color_white;
   }
 }
@@ -234,12 +248,12 @@ input.use-datepicker[type=text] {
 @mixin button-secondary($args...) {
   @include button-base($args...);
   background-color: $color_primary;
-  color: $color_black;
-  font-weight: normal;
+  text-align: center;
+  color: $color_white;
   &:hover,
   &:active,
   &:focus {
-    color: $color_black;
+    color: $color_white;
     background-color: $color_secondary;
   }
 }
@@ -271,9 +285,8 @@ a.link_button_green_large {
 /* Action Bar Mixins */
 
 @mixin follow-button {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  margin-bottom: 0;
+  width: 2em !important;
+
 }
 
 @mixin follower-count {
@@ -975,4 +988,40 @@ svg:hover {
 
   color: gray !important;
 }
+}
+
+.requests-container{
+  &:hover, :focus {
+    background-color: $color-primary !important;
+    color: white;
+  }
+  .requests-link{
+    color: #282727;
+
+    &:hover {
+      color: white !important;
+    }
+
+  }
+}
+
+
+
+ul.no_bullets {
+  list-style-type:none;
+  margin:0 0 30px;
+  padding:2em;
+
+  li {
+    margin-bottom:6px;
+  }
+}
+
+.search-input{
+  width: 300px !important;
+
+}
+.selected a{
+  color: $color_primary !important;
+  border-bottom: 2px solid $primary-color !important;
 }

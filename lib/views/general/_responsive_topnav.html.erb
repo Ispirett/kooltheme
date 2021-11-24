@@ -1,6 +1,6 @@
 <div id="topnav" class="topnav <%= @in_pro_area ? 'topnav--pro' : '' %>">
-  <ul id="navigation" class="navigation flex justify-around items-center" role="navigation">
-    <li class="mr-4"><%= link_to '', frontpage_path, :id => 'logo', :class => 'site-title__logo' %></li>
+  <ul id="navigation" class="navigation md:flex md:justify-between md:items-center" role="navigation">
+    <li class="ml-4 lg:mr-4 lg:ml-0 "><%= link_to '', frontpage_path, :id => 'logo', :class => 'site-title__logo' %></li>
 
     <% if can?(:access, :alaveteli_pro) %>
       <%= render :partial => 'alaveteli_pro/general/nav_items' %>
@@ -10,9 +10,20 @@
 
     <li>
       <% unless @user %>
-        <%= link_to _("Sign in or sign up"), signin_path(:r => request.fullpath), :class => "sign_in_link "  %>
+        <%= link_to _("Sign in "), signin_path(:r => request.fullpath), :class => "sign_in_link "  %>
       <% end  %>
     </li>
+
+    <li>
+      <% unless @user %>
+        <div class="theme-blue-bg rounded-lg text-white h-10 w-30 ml-2 flex justify-center items-center font-semibold">
+          <%= link_to _("Sign up"), signin_path(:r => request.fullpath),
+                      :class => "", style: "color:white"  %>
+        </div>
+
+      <% end  %>
+    </li>
+
 
 
   </ul>
