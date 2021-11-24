@@ -273,6 +273,7 @@ input.use-datepicker[type=text] {
 }
 
 form input[type=submit], a.link_button_green, a.link_button_green_large {
+  padding-top: 1rem;
   @include button-primary;
   text-decoration: none;
 }
@@ -292,11 +293,10 @@ a.link_button_green_large {
 @mixin follower-count {
   color: $color_dark_grey;
   padding: 0.56em 1.25em;
-  border: 1px solid $color_light_grey;
+  border: 2px solid $color_light_grey;
   position: relative;
   left: -3px;
   line-height: 1.6em;
-  border-left: 0;
   border-radius: 3px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -1006,6 +1006,14 @@ svg:hover {
 }
 
 
+h1,li {
+  padding-bottom: 1rem;
+}
+
+p{
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
 
 ul.no_bullets {
   list-style-type:none;
@@ -1024,4 +1032,14 @@ ul.no_bullets {
 .selected a{
   color: $color_primary !important;
   border-bottom: 2px solid $primary-color !important;
+}
+
+.blue-button{
+  color: $color_dark_grey;
+  padding: 0.56em 1.25em;
+  border: 2px solid $color_primary;
+  position: relative;
+  left: -3px;
+  line-height: 1.6em;
+  border-radius: .5rem;
 }
