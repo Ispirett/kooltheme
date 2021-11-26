@@ -3,8 +3,8 @@
   <% if popular_bodies.size > 0 %>
   <aside class="p-8 shadow-md ">
 
-    <div class="w-96 mx-auto">
-      <h1 class="text-4xl font-semibold ">
+    <div class="mx-auto">
+      <h1 class=" text-xl xl:text-4xl font-semibold ">
         <%= _("Who can I request information from?") %>
       </h1>
       <p class="pt-4 text-gray-400">
@@ -17,10 +17,10 @@
     </div>
 
     <!-- ----------- -->
-    <ul class="w-96 mx-auto pt-4">
+    <ul class=" mx-auto pt-4">
       <% popular_bodies.each do |popular_body| %>
 
-      <li class="flex justify-around border-2
+      <li class="flex w-100 justify-around border-2
              border-blue-300 p-4 rounded-2xl mt-4
               requests-container cursor-pointer
              ">
@@ -53,8 +53,8 @@
   <% end %>
   <aside class="p-8 shadow-md sm:mt-8 lg:mt-0">
 
-    <div class="w-96 mx-auto">
-      <h1 class="text-4xl font-semibold ">
+    <div class=" mx-auto">
+      <h1 class="text-xl xl:text-4xl font-semibold ">
         <% if @request_events_all_successful %>
           <%= _("What information has been released?") %>
         <% else %>
@@ -71,7 +71,7 @@
     </div>
 
     <!-- ----------- -->
-    <ul class="w-96 mx-auto pt-4">
+    <ul class="w-100 mx-auto pt-4">
       <% @request_events.each do |event| %>
 
     <li class=" border-2

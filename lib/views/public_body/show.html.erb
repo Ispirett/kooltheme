@@ -1,7 +1,7 @@
 <% @title = h(@public_body.name) + _(" - view and make Freedom of Information requests") %>
 
 <% if flash[:search_params] %>
-  <div class="back-to-results">
+  <div class="back-to-results ">
     <div class="message">
       <%= link_to select_authority_path(flash[:search_params]) do %>
         <%= _('« Back to search results') %>
@@ -11,7 +11,7 @@
 <% end %>
 
 <div class="authority__header">
-  <h1 class="font-bold text-4xl"><%= h(@public_body.name) %></h1>
+  <h1 class="font-bold text-4xl pt-4"><%= h(@public_body.name) %></h1>
 
   <p class="authority__header__subtitle">
     <%= type_of_authority(@public_body) %><% unless @public_body.short_name.blank? %>,
