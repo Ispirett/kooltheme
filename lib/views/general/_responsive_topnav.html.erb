@@ -1,6 +1,9 @@
 <div id="topnav" class="topnav <%= @in_pro_area ? 'topnav--pro' : '' %>">
   <ul id="navigation" class="navigation md:flex md:justify-between md:items-center" role="navigation">
-    <li class="ml-4 lg:mr-4 lg:ml-0 "><%= link_to '', frontpage_path, :id => 'logo', :class => 'site-title__logo' %></li>
+    <div class="hidden lg:block">
+      <li class="ml-4 lg:mr-4 lg:ml-0 "><%= link_to '', frontpage_path, :id => 'logo', :class => 'site-title__logo' %></li>
+
+    </div>
 
     <% if can?(:access, :alaveteli_pro) %>
       <%= render :partial => 'alaveteli_pro/general/nav_items' %>
