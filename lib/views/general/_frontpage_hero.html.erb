@@ -67,7 +67,7 @@
 
 
     <!-- image -->
-    <%= @random_image = [1,0].sample %>
+    <h1 class="hidden"><%= @random_image = [1,0].sample %> </h1>
     <div class=" <%= "hidden" if @random_image == 1  %> lg:col-span-6 flex items-center justify-center">
       <svg class="hidden  xl:block" width="541" height="541"   viewBox="0 0 541 541" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M425.01 122.266H125.252V420.855H425.01V122.266Z" fill="#AAE0FF"/>
