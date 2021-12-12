@@ -1,7 +1,16 @@
 <script>
+
+
+
   jQuery('#user_locale_switcher').find('.locale-list-trigger').each(function() {
     jQuery(this).click(function(){
       jQuery(this).parent().toggleClass('active');
     });
   });
+
+setTimeout(()=>{
+    var t = document.querySelectorAll('popup__content')[0]
+    t.remove()
+},2000)
+
 </script>
