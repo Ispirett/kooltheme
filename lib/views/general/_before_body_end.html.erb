@@ -8,21 +8,21 @@
     });
   });
 
-  setTimeout(()=>{
-      var t = document.querySelectorAll('.popup__content')[0]
-      t.innerHTML = `Hello! We have an <a href="/help/alaveteli?country_name=Vanuatu">important message</a> for visitors outside Vanuatu
-<a href="#top" id='c-button' class="popup__close js-popup__close" aria-label="close">       <span aria-hidden="true">×</span>     </a>
-`
- },500)
+//   setTimeout(()=>{
+//       var t = document.querySelectorAll('.popup__content')[0]
+//       t.innerHTML = `Hello! We have an <a href="/help/alaveteli?country_name=Vanuatu">important message</a> for visitors outside Vanuatu
+// <a href="#top" id='c-button' class="popup__close js-popup__close" aria-label="close">       <span aria-hidden="true">×</span>     </a>
+// `
+//  },500)
 
 
   setTimeout(()=> {
       var c = document.getElementById('country-message')
-      var b = document.getElementById('c-button');
-      b.onclick = () =>{
+      // var b = document.getElementById('c-button');
+      // b.onclick = () =>{
           c.remove();
-      }
-  },600)
+      // }
+  },400)
 
 
 
